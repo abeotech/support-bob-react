@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { Button } from "react-bootstrap";
 import { ArrowRight, HelpCircle, X, XCircle } from "react-feather";
 import { motion } from 'framer-motion';
@@ -6,14 +6,12 @@ import { toast, Toaster } from "react-hot-toast";
 import { TextField } from "@mui/material";
 import { browserName, browserVersion, osName, osVersion } from "react-device-detect";
 
-export default function SupportBot({ projectKey, user }) {
+const SupportBot = props => {
+    const {user, projectKey} = props;
     const ref = useRef(null);
     // first option menu
     const [popup, setPopup] = useState(false);
     // bigger focus nesting into an option
-    const [focused, setFocused] = useState(false);
-    const [border, setBorder] = useState('none');
-    const [border2, setBorder2] = useState('none');
     const [focusId, setFocusId] = useState(null);
     const [subject, setSubject] = useState('');
     const [description, setDescription] = useState('');
@@ -99,12 +97,6 @@ export default function SupportBot({ projectKey, user }) {
                             <TextField
                             multiline='true'
                             maxRows={3}
-                                onFocus={() => {
-                                    setBorder('1px solid #B2E0F2');
-                                }}
-                                onBlur={() => {
-                                    setBorder('none');
-                                }}
                                 value={subject}
                                 onChange={(e) => {
                                     setSubject(e.target.value);
@@ -117,12 +109,6 @@ export default function SupportBot({ projectKey, user }) {
                             multiline='true'Ï
                             minRows = {3}
                             maxRows = {6}
-                                onFocus={() => {
-                                    setBorder2('1px solid #B2E0F2');
-                                }}
-                                onBlur={() => {
-                                    setBorder2('none');
-                                }}
                                 value={description}
                                 type='text'
                                 onChange={(e) => {
@@ -158,13 +144,11 @@ export default function SupportBot({ projectKey, user }) {
                             <p
                                 style={{ cursor: "pointer" }}
                                 onClick={() => {
-                                    setFocused(true);
                                     setFocusId(0);
                                 }}>Contact us</p>
                             <p
                                 style={{ cursor: "pointer" }}
                                 onClick={() => {
-                                    setFocused(true);
                                     setFocusId(1);
                                 }}>Suggest an improvement</p>
                         </motion.div>
@@ -187,3 +171,5 @@ export default function SupportBot({ projectKey, user }) {
         </div>
     )
 }
+
+export default SupportBot;
