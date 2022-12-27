@@ -1,6 +1,6 @@
 {
   "name": "support-bob-react",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "abeo.tech",
   "description": "Embed the support bob widget in your React app",
   "license": "MIT",
