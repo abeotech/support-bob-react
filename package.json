@@ -4,6 +4,7 @@
   "author": "abeo.tech",
   "description": "Embed the support bob widget in your React app",
   "license": "MIT",
+  "main": "./src/index.js",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@mui/material": "^5.11.2",

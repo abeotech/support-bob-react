@@ -6,8 +6,7 @@ import { toast, Toaster } from "react-hot-toast";
 import { TextField } from "@mui/material";
 import { browserName, browserVersion, osName, osVersion } from "react-device-detect";
 
-const SupportBot = props => {
-    const {user, projectKey} = props;
+function SupportBot ({user, projectKey}) {
     const ref = useRef(null);
     // first option menu
     const [popup, setPopup] = useState(false);
