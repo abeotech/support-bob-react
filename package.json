@@ -8,11 +8,12 @@
     "@babel/polyfill": "^7.12.1",
     "@mui/material": "^5.11.2",
     "framer-motion": "^8.0.2",
+    "np": "^7.6.2",
     "react-bootstrap": "^2.7.0",
     "react-device-detect": "^2.2.2",
     "react-feather": "^2.0.10",
     "react-hot-toast": "^2.4.0",
-    "web-vitals": "^2.1.4",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "build": "rollup -c",
@@ -43,7 +44,7 @@
     "react-dom": "^18.2.0"
   },
   "files": [
-    "dist"
+    "src"
   ],
   "devDependencies": {
     "@babel/cli": "^7.20.7",
@@ -56,9 +57,6 @@
     "babel-runtime": "^6.26.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "rollup": "^2.79.1",
-    "rollup-plugin-sass": "^1.12.17",
-    "rollup-plugin-typescript2": "^0.34.1"
+    "react-scripts": "5.0.1"
   }
 }
